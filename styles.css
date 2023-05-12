@@ -1,0 +1,10 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #5EE7DF, #B490CA);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
