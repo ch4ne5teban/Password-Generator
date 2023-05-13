@@ -74,3 +74,31 @@ function initialize() {
     passwordOutput.appendChild(passwordResult);
   }
 }
+
+function renderPassword(length, useLowerCase, useUpperCase, useNumbers, useCommonSpecial, useOtherSpecial, useGreekLetters, useHindiLetters, useJapaneseHiragana) {
+  const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+  const upperCaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const numbers = '0123456789';
+  const commonSpecialChars = '!@#$%^&*()';
+  const otherSpecialChars = '`~-_=+[{]}\\|;:\'",<.>/?';
+  const greekLetters = "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψω";
+  const hindiLetters = "अआइईउऊएऐओऔकखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसह";
+  const japaneseHiragana = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
+
+  let characterSet = '';
+  if (useUpperCase) characterSet += upperCaseLetters;
+  if (useLowerCase) characterSet += lowerCaseLetters;
+  if (useNumbers) characterSet += numbers;
+  if (useCommonSpecial) characterSet += commonSpecialChars;
+  if (useOtherSpecial) characterSet += otherSpecialChars;
+  if (useGreekLetters) characterSet += greekLetters;
+  if (useHindiLetters) characterSet += hindiLetters;
+  if (useJapaneseHiragana) characterSet += japaneseHiragana;
+
+  let password = '';
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characterSet.length);
+    password += characterSet[randomIndex];
+  }
+  return password;
+}
