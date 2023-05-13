@@ -1,26 +1,17 @@
 body {
   font-family: 'Inter', sans-serif;
-  background-image: linear-gradient(296deg,
+  background-image: linear-gradient(220deg,
       hsl(270deg 100% 7%) 0%,
-      hsl(227deg 5% 23%) 5%,
-      hsl(172deg 3% 31%) 10%,
-      hsl(138deg 3% 38%) 15%,
-      hsl(125deg 3% 43%) 20%,
-      hsl(118deg 4% 48%) 25%,
-      hsl(114deg 4% 53%) 30%,
-      hsl(111deg 6% 57%) 35%,
-      hsl(109deg 7% 61%) 40%,
-      hsl(108deg 8% 64%) 45%,
-      hsl(107deg 10% 67%) 50%,
-      hsl(107deg 12% 71%) 55%,
-      hsl(106deg 14% 74%) 60%,
-      hsl(106deg 17% 77%) 65%,
-      hsl(105deg 20% 80%) 70%,
-      hsl(105deg 24% 82%) 75%,
-      hsl(105deg 30% 85%) 80%,
-      hsl(104deg 37% 88%) 85%,
-      hsl(104deg 48% 90%) 90%,
-      hsl(104deg 66% 93%) 95%,
+      hsl(259deg 34% 15%) 9%,
+      hsl(259deg 20% 22%) 18%,
+      hsl(257deg 13% 29%) 27%,
+      hsl(254deg 8% 36%) 36%,
+      hsl(245deg 4% 44%) 45%,
+      hsl(221deg 3% 52%) 55%,
+      hsl(168deg 2% 59%) 64%,
+      hsl(130deg 5% 68%) 73%,
+      hsl(114deg 11% 77%) 82%,
+      hsl(107deg 27% 86%) 91%,
       hsl(104deg 100% 95%) 100%);
   display: flex;
   justify-content: center;
@@ -28,6 +19,13 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+#logo {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
 }
 
 .container {
@@ -42,13 +40,6 @@ body {
   border-radius: 15px;
   box-shadow: 0 40px 60px #555555;
   padding: 25px;
-}
-
-h1 {
-  font-family: 'Karla', sans-serif;
-  text-shadow: 1px 0px #000000;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 .password-len {
