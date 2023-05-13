@@ -43,3 +43,34 @@ hideAlertMsgOnSelect.forEach(checkbox => {
 });
 
 genPwdBtn.addEventListener('click', initialize);
+
+function initialize() {
+  const passwordLength = parseInt(document.getElementById('password-length').value);
+  const useLowerCase = document.getElementById('lower-case').checked;
+  const useUpperCase = document.getElementById('upper-case').checked;
+  const useNumbers = document.getElementById('numbers').checked;
+  const useCommonSpecial = document.getElementById('common-special').checked;
+  const useOtherSpecial = document.getElementById('other-special').checked;
+  const useGreekLetters = document.getElementById('greek').checked;
+  const useHindiLetters = document.getElementById('hindi').checked;
+  const useJapaneseHiragana = document.getElementById('japanese').checked;
+
+  passwordOutput.textContent = '';
+
+  const noCharSelectedAlertMsg = genPwdBtn.previousElementSibling;
+  if (!(useLowerCase || useUpperCase || useNumbers || useCommonSpecial || useOtherSpecial || useGreekLetters || useHindiLetters || useJapaneseHiragana)) {
+    noCharSelectedAlertMsg.style.display = 'block';
+    return;
+  }
+
+  for (let i = 0; i < numPwdValue.textContent; i++) {
+    const passwordResult = document.createElement('div');
+    passwordResult.textContent = renderPassword(passwordLength, useLowerCase, useUpperCase, useNumbers, useCommonSpecial, useOtherSpecial, useGreekLetters, useHindiLetters, useJapaneseHiragana);
+    passwordResult.classList.add('password-result');
+    passwordResult.addEventListener('click', () => {
+      navigator.clipboard.writeText(passwordResult.textContent);
+      passwordResult.textContent = "Copied to clipboard!";
+    });
+    passwordOutput.appendChild(passwordResult);
+  }
+}
