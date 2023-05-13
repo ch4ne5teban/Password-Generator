@@ -162,3 +162,10 @@ button:focus {
   text-shadow: 1px 0px #555555;
   text-align: center;
 }
+
+/* Large screens (desktops) */
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 94%;
+  }
+}
