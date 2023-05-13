@@ -10,3 +10,16 @@ passwordLengthInput.addEventListener('change', () => {
     passwordLengthInput.value = max;
   }
 });
+
+const nonLatinCharsAlert = document.querySelectorAll('.user-alert');
+nonLatinCharsAlert.forEach(checkbox => {
+  checkbox.addEventListener('change', event => {
+    const targetCheckbox = event.target;
+    const mightNotWorkAlertMsg = targetCheckbox.nextElementSibling;
+    if (targetCheckbox.checked) {
+      mightNotWorkAlertMsg.style.display = 'block';
+    } else {
+      mightNotWorkAlertMsg.style.display = 'none';
+    }
+  });
+});
