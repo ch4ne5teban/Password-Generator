@@ -1,6 +1,27 @@
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #5EE7DF, #B490CA);
+  background-image: linear-gradient(296deg,
+      hsl(270deg 100% 7%) 0%,
+      hsl(227deg 5% 23%) 5%,
+      hsl(172deg 3% 31%) 10%,
+      hsl(138deg 3% 38%) 15%,
+      hsl(125deg 3% 43%) 20%,
+      hsl(118deg 4% 48%) 25%,
+      hsl(114deg 4% 53%) 30%,
+      hsl(111deg 6% 57%) 35%,
+      hsl(109deg 7% 61%) 40%,
+      hsl(108deg 8% 64%) 45%,
+      hsl(107deg 10% 67%) 50%,
+      hsl(107deg 12% 71%) 55%,
+      hsl(106deg 14% 74%) 60%,
+      hsl(106deg 17% 77%) 65%,
+      hsl(105deg 20% 80%) 70%,
+      hsl(105deg 24% 82%) 75%,
+      hsl(105deg 30% 85%) 80%,
+      hsl(104deg 37% 88%) 85%,
+      hsl(104deg 48% 90%) 90%,
+      hsl(104deg 66% 93%) 95%,
+      hsl(104deg 100% 95%) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
