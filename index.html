@@ -18,70 +18,70 @@
 </head>
 
 <body>
-  <main class="container">
+  <main>
     <h1>Password Generator</h1>
+    <div class="container">
+      <h2>Password Length (12-84):</h2>
+      <label>
+        <input type="number" title="Password Length" min="12" max="84" value="16" id="password-length"
+          class="password-len">
+      </label>
 
-    <h2>Password Length (12-84):</h2>
-    <label>
-      <input type="number" title="Password Length" min="12" max="84" value="16" id="password-length"
-        class="password-len">
-    </label>
+      <h2>Character Types:</h2>
+      <!--Divided into divs to organize the char types into a grid if more types introduced in the future-->
+      <div class="character-types-container">
+        <div class="character-types-container-col1">
+          <label>
+            <input type="checkbox" id="lower-case" class="hide-on-select" checked> Lowercase Letters
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="upper-case" class="hide-on-select" checked> Uppercase Letters
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="numbers" class="hide-on-select" checked> Numbers
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="common-special" class="hide-on-select" checked> Common Special Characters
+          </label>
+          <br>
+        </div>
+        <div class="character-types-container-col2">
+          <label>
+            <input type="checkbox" id="other-special" class="user-alert hide-on-select"> Other Special Characters
+            <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="greek" class="user-alert hide-on-select"> 🇬🇷 Greek Letters
+            <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="hindi" class="user-alert hide-on-select"> 🇮🇳 Hindi Letters
+            <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="japanese" class="user-alert hide-on-select"> 🇯🇵 Japanese Hiragana
+            <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
+          </label>
+        </div>
+      </div>
 
-    <h2>Character Types:</h2>
-    <!--Divided into divs to organize the char types into a grid if more types introduced in the future-->
-    <div class="character-types-container">
-      <div class="character-types-container-col1">
-        <label>
-          <input type="checkbox" id="lower-case" class="hide-on-select" checked> Lowercase Letters
-        </label>
-        <br>
-        <label>
-          <input type="checkbox" id="upper-case" class="hide-on-select" checked> Uppercase Letters
-        </label>
-        <br>
-        <label>
-          <input type="checkbox" id="numbers" class="hide-on-select" checked> Numbers
-        </label>
-        <br>
-        <label>
-          <input type="checkbox" id="common-special" class="hide-on-select" checked> Common Special Characters
-        </label>
-        <br>
-      </div>
-      <div class="character-types-container-col2">
-        <label>
-          <input type="checkbox" id="other-special" class="user-alert hide-on-select"> Other Special Characters
-          <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
-        </label>
-        <br>
-        <label>
-          <input type="checkbox" id="greek" class="user-alert hide-on-select"> 🇬🇷 Greek Letters
-          <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
-        </label>
-        <br>
-        <label>
-          <input type="checkbox" id="hindi" class="user-alert hide-on-select"> 🇮🇳 Hindi Letters
-          <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
-        </label>
-        <br>
-        <label>
-          <input type="checkbox" id="japanese" class="user-alert hide-on-select"> 🇯🇵 Japanese Hiragana
-          <span class="might-not-work-alert"> WARNING! Might not work on some websites.</span>
-        </label>
-      </div>
+      <h2>Number of Passwords (1-20): <span id="num-passwords-value"></span></h2>
+      <label>
+        <input type="range" title="Number of Passwords" min="1" max="20" value="10" id="num-passwords-slider"
+          class="num-passwords-slider">
+      </label>
+
+      <span class="no-char-selected-alert">Please select at least one character type before generating passwords!</span>
+      <button id="generate-password" title="Generate Passwords">Generate Password(s)</button>
+
+      <output id="password-output"></output>
     </div>
-
-    <h2>Number of Passwords (1-20): <span id="num-passwords-value"></span></h2>
-    <label>
-      <input type="range" title="Number of Passwords" min="1" max="20" value="10" id="num-passwords-slider"
-        class="num-passwords-slider">
-    </label>
-
-    <span class="no-char-selected-alert">Please select at least one character type before generating passwords!</span>
-    <button id="generate-password" title="Generate Passwords">Generate Password(s)</button>
-
-    <output id="password-output"></output>
-
   </main>
   <script src="script.js"></script>
 </body>
