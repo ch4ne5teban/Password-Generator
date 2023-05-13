@@ -23,3 +23,10 @@ nonLatinCharsAlert.forEach(checkbox => {
     }
   });
 });
+
+const numPwdSlider = document.getElementById('num-passwords-slider');
+const numPwdValue = document.getElementById('num-passwords-value');
+numPwdValue.textContent = numPwdSlider.value;
+numPwdSlider.oninput = function () {
+  numPwdValue.textContent = this.value;
+}
