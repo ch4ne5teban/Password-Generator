@@ -155,3 +155,10 @@ button:focus {
   display: none;
   color: red;
 }
+
+.no-char-selected-alert {
+  display: none;
+  color: #120024;
+  text-shadow: 1px 0px #555555;
+  text-align: center;
+}
