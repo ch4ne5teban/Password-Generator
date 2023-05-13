@@ -51,3 +51,18 @@ h1 {
 .character-types-container-col2 {
   margin-left: 20px;
 }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checkbox-label {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  margin-right: 5px;
+}

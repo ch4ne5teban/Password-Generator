@@ -1,2 +1,2 @@
 # Password-Generator
-Generates up to 10 passwords of 12-32 characters that may include lower-case and upper-case English letters, numbers, symbols, and even Hindi letters.
+A password generator to challenge the hegemony of the Latin alphabet in password creation. Generates up to 20 passwords of 12-84 characters that may include lower-case and upper-case English letters, numbers, symbols, and even Greek, Hindi, and Japanese letters.
