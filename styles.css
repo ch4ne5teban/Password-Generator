@@ -150,3 +150,8 @@ button:focus {
 .password-result:hover {
   box-shadow: 0 3px 6px #555555;
 }
+
+.might-not-work-alert {
+  display: none;
+  color: red;
+}
