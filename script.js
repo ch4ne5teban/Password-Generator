@@ -30,3 +30,16 @@ numPwdValue.textContent = numPwdSlider.value;
 numPwdSlider.oninput = function () {
   numPwdValue.textContent = this.value;
 }
+
+const genPwdBtn = document.getElementById('generate-password');
+const passwordOutput = document.getElementById('password-output');
+
+const hideAlertMsgOnSelect = document.querySelectorAll('.hide-on-select');
+hideAlertMsgOnSelect.forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    const noCharSelectedAlertMsg = genPwdBtn.previousElementSibling;
+    noCharSelectedAlertMsg.style.display = 'none';
+  });
+});
+
+genPwdBtn.addEventListener('click', initialize);
