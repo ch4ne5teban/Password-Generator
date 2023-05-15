@@ -75,7 +75,7 @@ function initialize() {
   }
 }
 
-function renderPassword(length, useLowerCase, useUpperCase, useNumbers, useCommonSpecial, useOtherSpecial, useGreekLetters, useHindiLetters, useJapaneseHiragana) {
+function renderPassword(passwordLength, useLowerCase, useUpperCase, useNumbers, useCommonSpecial, useOtherSpecial, useGreekLetters, useHindiLetters, useJapaneseHiragana) {
   const lowerCaseLetters = 'abcdefghijklmnopqrstuvwxyz';
   const upperCaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const numbers = '0123456789';
@@ -96,9 +96,15 @@ function renderPassword(length, useLowerCase, useUpperCase, useNumbers, useCommo
   if (useJapaneseHiragana) characterSet += japaneseHiragana;
 
   let password = '';
-  for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * characterSet.length);
+  for (let i = 0; i < passwordLength; i++) {
+    const randomIndex = getRandomIndex(characterSet.length);
     password += characterSet[randomIndex];
   }
   return password;
+}
+
+function getRandomIndex(maxValue) {
+  const randomArray = new Uint32Array(1);
+  crypto.getRandomValues(randomArray);
+  return randomArray[0] % maxValue;
 }
