@@ -97,7 +97,7 @@ function renderPassword(length, useLowerCase, useUpperCase, useNumbers, useCommo
 
   let password = '';
   for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * characterSet.length);
+    const randomIndex = getRandomIndex(characterSet.length);
     password += characterSet[randomIndex];
   }
   return password;
