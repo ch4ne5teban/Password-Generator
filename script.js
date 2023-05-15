@@ -102,3 +102,9 @@ function renderPassword(length, useLowerCase, useUpperCase, useNumbers, useCommo
   }
   return password;
 }
+
+function getRandomIndex(maxValue) {
+  const randomArray = new Uint32Array(1);
+  crypto.getRandomValues(randomArray);
+  return randomArray[0] % maxValue;
+}
